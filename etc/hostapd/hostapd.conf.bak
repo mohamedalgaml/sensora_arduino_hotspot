@@ -1,0 +1,23 @@
+interface=wlan1
+driver=nl80211
+ssid=My-Hotspot
+hw_mode=g
+channel=6
+ieee80211n=1
+wmm_enabled=1
+
+# Hotspot 2.0 / HS20
+ieee80211u=1
+hs20=1
+anqp_domain_id=1
+interworking=1
+access_network_type=0
+internet=1
+venue_group=2
+venue_type=8
+hs20_oper_friendly_name=My HS20 Hotspot
+hs20_wan_metrics=01:8000:1000:80:0
+eap_server=1
+ca_cert=/etc/hostapd/ca.pem
+server_cert=/etc/hostapd/server.pem
+private_key=/etc/hostapd/server.key

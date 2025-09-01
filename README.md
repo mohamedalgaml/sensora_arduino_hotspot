@@ -1,0 +1,13 @@
+# HS2.0 / OSU Pack
+- Configs:
+  - /etc/hostapd/hostapd-main.conf
+  - /etc/hostapd/hostapd-osu.conf
+  - /etc/dnsmasq.conf
+  - /etc/dnsmasq.d/osu.conf
+  - /etc/wpa_supplicant/interworking.conf (+ osu-client.conf لو موجود)
+- Backups:
+  - backups/dnsmasq-backup* (قبل التعديلات)
+  - backups/iptables-rules.txt
+  - backups/system-versions.txt, ip-addr.txt, ip-route.txt
+- Script:
+  - scripts/recreate-network.sh لإعادة تشغيل الجسر/NAT/hostapd بسرعة.
