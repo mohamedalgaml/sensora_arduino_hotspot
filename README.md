@@ -4,10 +4,10 @@
   - /etc/hostapd/hostapd-osu.conf
   - /etc/dnsmasq.conf
   - /etc/dnsmasq.d/osu.conf
-  - /etc/wpa_supplicant/interworking.conf (+ osu-client.conf لو موجود)
+  - /etc/wpa_supplicant/interworking.conf (+ osu-client.conf if present)
 - Backups:
-  - backups/dnsmasq-backup* (قبل التعديلات)
+  - backups/dnsmasq-backup* (before modifications)
   - backups/iptables-rules.txt
   - backups/system-versions.txt, ip-addr.txt, ip-route.txt
 - Script:
-  - scripts/recreate-network.sh لإعادة تشغيل الجسر/NAT/hostapd بسرعة.
+  - scripts/recreate-network.sh to restart bridge/NAT/hostapd quickly.
