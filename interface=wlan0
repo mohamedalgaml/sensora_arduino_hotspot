@@ -1,0 +1,21 @@
+interface=wlan0
+dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
+dhcp-option=3,192.168.4.1
+dhcp-option=6,192.168.4.1
+server=8.8.8.8
+server=8.8.4.4
+log-dhcp
+log-queries
+
+# إعادة توجيه جميع طلبات DNS إلى الخادم المحلي
+address=/#/192.168.4.1
+
+# إعادة توجيه نطاقات Captive Portal الشهيرة
+address=/captive.apple.com/192.168.4.1
+address=/www.airport.us/192.168.4.1
+address=/www.android.com/192.168.4.1
+address=/connectivitycheck.android.com/192.168.4.1
+address=/connectivitycheck.gstatic.com/192.168.4.1
+address=/clients3.google.com/192.168.4.1
+address=/msftconnecttest.com/192.168.4.1
+address=/nmcheck.gnome.org/192.168.4.1

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title!>ترحيب - Shop_Welcome_OSU</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2c3e50, #1a1a2e);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        
+        .description {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #e0e0e0;
+        }
+        
+        .features {
+            list-style-type: none;
+            margin: 20px 0;
+            padding: 0;
+            text-align: right;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            padding-right: 30px;
+            position: relative;
+        }
+        
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .btn {
+            background: linear-gradient(to right, #4CAF50, #2E8B57);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 15px 0;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(to right, #3e8e41, #267349);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .signal-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .signal-bars {
+            display: flex;
+            align-items: flex-end;
+            margin-left: 10px;
+            height: 20px;
+        }
+        
+        .bar {
+            width: 4px;
+            background-color: #4CAF50;
+            margin-right: 2px;
+            border-radius: 2px;
+        }
+        
+        .bar:nth-child(1) { height: 5px; }
+        .bar:nth-child(2) { height: 10px; }
+        .bar:nth-child(3) { height: 15px; }
+        .bar:nth-child(4) { height: 20px; }
+        
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📶</div>
+        <h1>مرحباً بك في Shop_Welcome_OSU</h1>
+        <p class="description">شبكتنا توفر اتصالاً آمناً بالإنترنت مع مصادقة تلقائية. انقر على الزر أدناه للاتصال فوراً.</p>
+        
+        <ul class="features">
+            <li>اتصال آمن مع تشفير متقدم</li>
+            <li>مصادقة تلقائية بدون إدخال بيانات</li>
+            <li>وصول فوري إلى الإنترنت</li>
+            <li>بدون الحاجة لتسجيل مسبق</li>
+        </ul>
+        
+        <button class="btn" onclick="connect()">الاتصال تلقائياً</button>
+        
+        <div class="signal-info">
+            <span>قوة الإشارة:</span>
+            <div class="signal-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>باتصالك بهذه الشبكة، فإنك توافق على <a href="#" style="color: #4CAF50;">شروط الاستخدام</a></p>
+        </div>
+    </div>
+
+    <script>
+        function connect() {
+            const btn = document.querySelector('.btn');
+            btn.innerHTML = 'جاري الاتصال...';
+            btn.style.opacity = '0.8';
+            btn.disabled = true;
+            setTimeout(() => {
+                document.body.innerHTML = `
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; background: linear-gradient(135deg, #2c3e50, #1a1a2e); color: white; text-align: center; padding: 20px;">
+                        <div style="font-size: 60px; margin-bottom: 20px;">✅</div>
+                        <h1 style="color: #4CAF50; margin-bottom: 15px;">تم الاتصال بنجاح!</h1>
+                        <p style="font-size: 18px; margin-bottom: 10px;">يمكنك الآن استخدام الإنترنت.</p>
+                        <p style="color: #aaa; font-size: 14px;">سيتم توجيهك تلقائياً خلال 5 ثوانٍ...</p>
+                    </div>
+                `;
+                
+                setTimeout(() => {
+                    window.location.href = 'http://www.google.com';
+                }, 5000);
+            }, 2000);
+        }
+        
+        setInterval(() => {
+            const bars = document.querySelectorAll('.bar');
+            bars.forEach(bar => {
+                let randomHeight = Math.floor(Math.random() * 20) + 5;
+                bar.style.height = randomHeight + 'px';
+            });
+        }, 3000);
+    </script>
+</body>
+</html>
