@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osu:osuProviderList 
+    xmlns:osu="http://www.wi-fi.org/specifications/hotspot2dot0/v1.0/osu"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <osu:provider id="shop-welcome-001">
+        <!-- اسم مزود الخدمة -->
+        <osu:name lang="en">Shop Welcome OSU</osu:name>
+        <osu:name lang="ar">ترحيب المتجر</osu:name>
+        
+        <!-- وصف الخدمة -->
+        <osu:description lang="en">Free high-speed internet access for visitors</osu:description>
+        <osu:description lang="ar">اتصال إنترنت عالي السرعة مجاني للزوار</osu:description>
+        
+        <!-- رابط التسجيل -->
+        <osu:serverURI>https://192.168.4.1/osu/signup.html</osu:serverURI>
+        
+        <!-- طريقة التسجيل (1 = OMA-DM) -->
+        <osu:method>1</osu:method>
+        
+        <!-- أيقونة الخدمة -->
+        <osu:icon width="64" height="64" type="image/png" lang="en">
+            https://192.168.4.1/osu/assets/images/logo.png
+        </osu:icon>
+        
+        <!-- معلومات إضافية -->
+        <osu:serviceDescription lang="en">Secure and automatic WiFi connection</osu:serviceDescription>
+        <osu:serviceDescription lang="ar">اتصال واي فاي آلي وآمن</osu:serviceDescription>
+        
+        <!-- سياسة الاستخدام -->
+        <osu:termsOfUse lang="en">https://192.168.4.1/osu/terms_en.html</osu:termsOfUse>
+        <osu:termsOfUse lang="ar">https://192.168.4.1/osu/terms_ar.html</osu:termsOfUse>
+        
+        <!-- معلومات الاتصال (اختياري) -->
+        <osu:contactInfo lang="en">support@iot.com</osu:contactInfo>
+        <osu:contactInfo lang="ar">support@iot.com</osu:contactInfo>
+    </osu:provider>
+
+</osu:osuProviderList>
