@@ -3,7 +3,7 @@
 
 set -e
 
-echo "🛡️  إنشاء شهادات SSL لـ Hotspot 2.0"
+echo "  إنشاء شهادات SSL لـ Hotspot 2.0"
 
 # إنشاء مجلد SSL إذا لم يكن موجوداً
 mkdir -p ssl
